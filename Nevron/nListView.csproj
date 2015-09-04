@@ -1,0 +1,129 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.3077</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3A5E63B5-473F-4296-9CCC-C5440B887A7F}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>nListView</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <NoStdLib>false</NoStdLib>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.SHDocVw, Version=1.1.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>nControls\AxInterop.SHDocVw.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.SHDocVw, Version=1.1.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>nControls\Interop.SHDocVw.dll</HintPath>
+    </Reference>
+    <Reference Include="Nevron.Presentation, Version=8.9.17.12, Culture=neutral, PublicKeyToken=6656c5d1103e75cc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>nControls\Nevron.Presentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Nevron.System, Version=8.9.17.12, Culture=neutral, PublicKeyToken=6a987feae5e496fd, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>nControls\Nevron.System.dll</HintPath>
+    </Reference>
+    <Reference Include="Nevron.UI.WebForm.Controls, Version=8.9.17.12, Culture=neutral, PublicKeyToken=b5bb1156a58c1618, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>nControls\Nevron.UI.WebForm.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Nevron.UI.WinForm.Docking, Version=8.9.17.12, Culture=neutral, PublicKeyToken=446d8963349a628a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>nControls\Nevron.UI.WinForm.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="Nevron.UI.WinForm.Skins, Version=8.9.17.12, Culture=neutral, PublicKeyToken=231d012f86497c6a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>nControls\Nevron.UI.WinForm.Skins.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Global.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="nControls\align.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="nControls\Element.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="nControls\nListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="nControls\nList\element.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="nControls\nList\nList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="nControls\nLocation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="nControls\Properties\Resources.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="nControls\test\test.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="nControls\view.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="resfinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="nControls.icon.nListView.bmp" />
+    <EmbeddedResource Include="nControls.icon.nListView_icon.ico" />
+    <EmbeddedResource Include="nControls.Properties.Resources.resources" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
